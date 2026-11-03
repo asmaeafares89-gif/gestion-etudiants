@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management System</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎓 Student Management</h1>
+    <p>Gestion des étudiants - Administration</p>
+  </header>
+
+  <main>
+    <section class="stats">
+      <div class="stat">
+        <h2 id="total">0</h2>
+        <p>Total étudiants</p>
+      </div>
+      <div class="stat">
+        <h2 id="informatique">0</h2>
+        <p>Informatique</p>
+      </div>
+      <div class="stat">
+        <h2 id="reseaux">0</h2>
+        <p>Réseaux</p>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>➕ Ajouter un étudiant</h2>
+      <form id="studentForm">
+        <input id="firstName" placeholder="Prénom" required>
+        <input id="lastName" placeholder="Nom" required>
+        <input id="studentId" placeholder="Numéro étudiant" required>
+        <input id="email" type="email" placeholder="Email" required>
+        <select id="department" required>
+          <option value="">Choisir une filière</option>
+          <option>Informatique</option>
+          <option>Réseaux</option>
+          <option>Gestion</option>
+        </select>
+        <button type="submit">Ajouter l'étudiant</button>
+      </form>
+    </section>
+
+    <section class="panel">
+      <h2>📋 Liste des étudiants</h2>
+      <input id="search" placeholder="🔍 Rechercher un étudiant...">
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Nom complet</th>
+              <th>Matricule</th>
+              <th>Email</th>
+              <th>Filière</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="studentList"></tbody>
+        </table>
+      </div>
+      <p id="empty"></p>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
